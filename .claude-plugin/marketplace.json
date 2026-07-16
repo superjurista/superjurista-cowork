@@ -5,8 +5,7 @@
     "email": "georgemarmelstein@gmail.com"
   },
   "metadata": {
-    "description": "Marketplace do SuperJurista — sistema agêntico jurídico para Claude Cowork e Claude Code. O plugin é o corpo (runtime fino, público); o cérebro (prompts, missões, pipelines e bases de jurisprudência) vive no gateway MCP e exige assinatura ativa.",
-    "pluginRoot": "./plugins"
+    "description": "Marketplace do SuperJurista — sistema agêntico jurídico para Claude Cowork e Claude Code. O plugin é o corpo (runtime fino, público); o cérebro (prompts, missões, pipelines e bases de jurisprudência) vive no gateway MCP e exige assinatura ativa."
   },
   "plugins": [
     {
