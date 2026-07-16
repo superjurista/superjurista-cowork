@@ -1,0 +1,74 @@
+# SuperJurista para Claude Cowork
+
+> **O corpo é público. O cérebro é assinatura.**
+
+Este repositório é o **marketplace do plugin SuperJurista** — o sistema
+agêntico jurídico que roda dentro do **Claude Cowork** (e do Claude Code):
+tribunal probatório adversarial, minuta de sentença com regime verbatim de
+citações e radar de precedentes ao vivo nos 6 TRFs.
+
+## Arquitetura: corpo e cérebro
+
+| Camada | Onde vive | O que contém |
+|--------|-----------|--------------|
+| **Corpo** (este repo, público) | Plugin instalado no Cowork | Skills orquestradoras finas, agentes de capacidade, scripts locais (OCR dos autos, gate de citações) |
+| **Cérebro** (gateway MCP, assinatura) | `superjurista.georgemarmelstein.workers.dev` | Prompts curados, missões de pipeline, manifestos, radar de jurisprudência dos 6 TRFs |
+
+Nenhum prompt de valor vive neste repositório — **por desenho**. O plugin é um
+*runtime*: cada etapa de pipeline pede sua missão ao gateway em tempo de
+execução (`carregar_pipeline` / `carregar_missao`). Sem assinatura ativa, o
+corpo é inerte. Com assinatura, **pipelines novos aparecem sem reinstalar
+nada** — eles são conteúdo do servidor, não código do plugin.
+
+## Instalação
+
+**No Claude Cowork (desktop):**
+1. Cowork → **Customize** → **Plugins** → adicionar marketplace a partir deste
+   repositório (GitHub/Git URL).
+2. Instalar o plugin **superjurista**. O conector MCP do gateway vem embutido.
+3. Numa conversa nova, peça qualquer tarefa jurídica — o bootstrap
+   (`iniciar_superjurista`) valida a assinatura e carrega a constituição.
+
+**No Claude Code:**
+```
+/plugin marketplace add <url-deste-repo>
+/plugin install superjurista@superjurista
+```
+
+## O que ele faz
+
+| Pipeline | Produto final |
+|----------|---------------|
+| `tribunal-probatico` | Debate adversarial real sobre a prova (teses paralelas, réplicas cruzadas, síntese por probanda do juiz-mediador) |
+| `sentenca-minuta` | Sentença integral: linha do tempo → relatório → análise → fundamentação → montagem, com gates de âncora e gate local de citações dos autos |
+| `radar-precedentes` | Mapa de um tema em toda a Justiça Federal de 2º grau, com trechos verbatim citáveis |
+
+Regra de ouro do sistema: **nenhuma citação sem verificação**. Jurisprudência
+só via buscas ao vivo do conector; citações dos autos conferidas localmente
+(`verificar_autos_local.py`) — os autos **nunca saem da sua máquina**, só o
+veredito (com hash) é registrado.
+
+## Requisitos
+
+- Claude Cowork (plano pago) ou Claude Code.
+- Assinatura SuperJurista ativa (o gateway responde ao bootstrap).
+- Para autos em PDF: Python 3.8+, poppler e tesseract-por no ambiente de
+  execução (a skill `preparar-autos` instrui a instalação).
+
+## Estado (julho/2026) — honestidade radical
+
+- O runtime (`executar-pipeline`) segue o manifesto servido pelo gateway;
+  a fábrica de pipelines do servidor está em implantação — se
+  `carregar_pipeline` ainda não existir no conector, o plugin oferece os
+  prompts avulsos (`listar_prontos`) e avisa.
+- Bugs de plataforma conhecidos e monitorados: conectores custom podem não
+  ligar a sessões do Cowork (anthropics/claude-ai-mcp#584) e pedidos de
+  permissão por tool call em contas Team (#491).
+- Este plugin é **inteligência aumentada** para profissionais do direito —
+  subsídio de trabalho, nunca substituição do julgamento humano.
+
+## Licença
+
+O código deste pacote (o "corpo") é MIT. Os prompts, missões, manifestos e
+bases servidos pelo gateway (o "cérebro") **não estão neste repositório** e
+são licenciados apenas via assinatura.

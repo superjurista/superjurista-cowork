@@ -1,0 +1,23 @@
+{
+  "name": "superjurista",
+  "owner": {
+    "name": "George Marmelstein",
+    "email": "georgemarmelstein@gmail.com"
+  },
+  "metadata": {
+    "description": "Marketplace do SuperJurista — sistema agêntico jurídico para Claude Cowork e Claude Code. O plugin é o corpo (runtime fino, público); o cérebro (prompts, missões, pipelines e bases de jurisprudência) vive no gateway MCP e exige assinatura ativa.",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "superjurista",
+      "source": "./plugins/superjurista",
+      "description": "Pipelines agênticos jurídicos no Claude Cowork: tribunal probatório adversarial, minuta de sentença com regime verbatim de citações e radar de precedentes nos 6 TRFs — executados por um runtime que busca cada missão no gateway SuperJurista em tempo real. Pipelines novos chegam pelo servidor, sem reinstalar nada.",
+      "version": "1.0.0",
+      "author": { "name": "George Marmelstein" },
+      "category": "legal",
+      "keywords": ["juridico", "sentenca", "jurisprudencia", "trf", "tribunal-probatorio", "precedentes", "advocacia", "magistratura"],
+      "license": "MIT"
+    }
+  ]
+}

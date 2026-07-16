@@ -1,0 +1,12 @@
+{
+  "name": "superjurista",
+  "version": "1.0.0",
+  "description": "O sistema agêntico jurídico do SuperJurista dentro do Claude Cowork. Este pacote é o CORPO: skills orquestradoras finas, agentes de capacidade e scripts locais (OCR e gate de citações dos autos). O CÉREBRO — prompts curados, missões de pipeline, radar de jurisprudência dos 6 TRFs — vive no gateway MCP (conector incluído) e é servido em tempo de execução, sob assinatura. Pipelines: tribunal probatório adversarial, minuta de sentença (regime verbatim) e radar de precedentes; novos pipelines são publicados no servidor e ficam disponíveis sem atualizar o plugin.",
+  "author": {
+    "name": "George Marmelstein",
+    "email": "georgemarmelstein@gmail.com"
+  },
+  "homepage": "https://superjurista.georgemarmelstein.workers.dev",
+  "license": "MIT",
+  "keywords": ["legal", "juridico", "sentenca", "jurisprudencia", "pipelines", "trf", "brasil"]
+}
