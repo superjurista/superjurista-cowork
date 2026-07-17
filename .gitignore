@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# O gitignore GLOBAL da maquina ignora .mcp.json — este repo PRECISA versionar
+# o conector do plugin (sem ele o pacote publico nasce sem o gateway).
+!plugins/superjurista/.mcp.json

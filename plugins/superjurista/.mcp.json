@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "superjurista": {
+      "type": "http",
+      "url": "https://superjurista.georgemarmelstein.workers.dev/mcp"
+    }
+  }
+}

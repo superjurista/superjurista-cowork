@@ -1,6 +1,7 @@
 ---
 name: executor-etapa
 description: Executor genérico de UMA etapa de pipeline do SuperJurista. O orquestrador (skill executar-pipeline) o despacha com a missão completa injetada no prompt de delegação — linha do tempo, relatório, análise, fundamentação, montagem, consolidações. Não deve ser invocado sem missão injetada.
+color: orange
 ---
 
 # Executor de Etapa — SuperJurista
