@@ -37,11 +37,16 @@ nada** — eles são conteúdo do servidor, não código do plugin.
 
 ## O que ele faz
 
+O catálogo é **vivo** — a lista completa e atual vem de `carregar_pipeline()`
+no próprio conector; pipelines novos aparecem sem atualizar este pacote.
+Exemplos publicados:
+
 | Pipeline | Produto final |
 |----------|---------------|
 | `tribunal-probatico` | Debate adversarial real sobre a prova (teses paralelas, réplicas cruzadas, síntese por probanda do juiz-mediador) |
 | `sentenca-minuta` | Sentença integral: linha do tempo → relatório → análise → fundamentação → montagem, com gates de âncora e gate local de citações dos autos |
 | `radar-precedentes` | Mapa de um tema em toda a Justiça Federal de 2º grau, com trechos verbatim citáveis |
+| `analisar-sessao` | Revisão econômica de pauta de sessão colegiada: teses por ementa, detecção de incoerências/erros/sensibilidade, confronto jurisprudencial só onde há mérito e relatório de alertas |
 
 Regra de ouro do sistema: **nenhuma citação sem verificação**. Jurisprudência
 só via buscas ao vivo do conector; citações dos autos conferidas localmente
