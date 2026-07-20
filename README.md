@@ -49,6 +49,10 @@ Exemplos publicados:
 | `analisar-sessao` | Revisão econômica de pauta de sessão colegiada: teses por ementa, detecção de incoerências/erros/sensibilidade, confronto jurisprudencial só onde há mérito e relatório de alertas |
 | `embargos-advogado` | Embargos de declaração na perspectiva do advogado: síntese das peças + linha do tempo, análise de vícios da decisão (com veredito de viabilidade e alerta de prequestionamento) e minuta da petição — se a análise disser "não embargue", o pipeline para e explica |
 
+Perdido? Diga **"me ajuda a usar o SuperJurista"** — o assistente de ajuda
+(skill `ajuda-superjurista`) explica o sistema em linguagem de gabinete,
+diagnostica o que você precisa e conduz à rota certa, sem jargão técnico.
+
 Regra de ouro do sistema: **nenhuma citação sem verificação**. Jurisprudência
 só via buscas ao vivo do conector; citações dos autos conferidas localmente
 (`verificar_autos_local.py`) — os autos **nunca saem da sua máquina**, só o
