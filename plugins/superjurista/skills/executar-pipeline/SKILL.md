@@ -30,7 +30,9 @@ com disciplina de máquina: manifesto é lei, gate é lei, missão é lei.
 
 **Etapa `tipo="local"`**: com `skill=`, siga a skill indicada (ex.:
 `preparar-autos`) na própria sessão. Com `comando=`, execute o comando no
-shell substituindo `{N}` e `{WORKSPACE}` pelos valores da Etapa 0 — exit
+shell substituindo `{N}` e `{WORKSPACE}` pelos valores da Etapa 0, e
+`${CLAUDE_PLUGIN_ROOT}` pelo caminho raiz deste plugin (substitua VOCÊ MESMO,
+antes de executar — não dependa de a variável existir no shell) — exit
 diferente de 0 é gate reprovado (o stdout diz o motivo; corrija a causa no
 artefato apontado e rode de novo, máx. 2 tentativas). Respeite o atributo
 `se=` — é condição, não ordem.
