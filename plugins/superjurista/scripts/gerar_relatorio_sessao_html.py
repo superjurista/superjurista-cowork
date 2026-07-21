@@ -5,10 +5,10 @@ Etapa final DETERMINISTICA do pipeline analisar-sessao: le os contratos JSON
 (bloco ```json ao fim de cada artefato MD), agrega por ESCADA DE CORES e
 renderiza um HTML autocontido para o gabinete.
 
-Proveniencia: a escada de cores, o mapa de acoes e a paleta vem do motor da
-fabrica supercordelia (scripts/consolidar.py e _estilos.py) — "sem LLM, 100%
-deterministico: a inteligencia ja foi gasta nos agentes; aqui e aritmetica de
-cores". Este script e uma versao SIMPLIFICADA declarada:
+Proveniencia: a escada de cores, o mapa de acoes e a paleta vem do motor
+deterministico da fabrica local — "sem LLM, 100% deterministico: a
+inteligencia ja foi gasta nos agentes; aqui e aritmetica de cores". Este
+script e uma versao SIMPLIFICADA declarada:
 
   Escada:  VERMELHO(4) > AMARELO(3) > CINZA(2) > VERDE(1) > BRANCO(0)
   Acao:    VERMELHO=DECIDIR  AMARELO=DEBATER  CINZA=CORRIGIR  VERDE/BRANCO=SEGUIR
@@ -48,7 +48,7 @@ FRENTE_NOME = {"cruzada": "cruzada", "jurisprudencia": "tribunal",
                "incoerencia": "incoerência", "sensibilidade": "sensibilidade",
                "erros": "redação"}
 
-# Paleta (proveniencia: supercordelia/_estilos.py)
+# Paleta (proveniencia: motor deterministico da fabrica local)
 COR_ACAO = {"DECIDIR": "#A12B22", "DEBATER": "#B07A1E", "CORRIGIR": "#7C8794", "SEGUIR": "#3E7256"}
 COR_DOT = {"VERMELHO": "#A12B22", "AMARELO": "#B07A1E", "CINZA": "#7C8794",
            "VERDE": "#3E7256", "BRANCO": "#C9D1D9"}
@@ -184,7 +184,7 @@ footer{{margin-top:2rem;color:#9AA6B2;font-size:.75rem;border-top:1px solid #C9D
 <div class="economia"><b>Economia registrada</b> (ED de rejeição sem busca externa — "na dúvida, busca"):
 <ul>{economia or "<li>nenhuma — todas as ementas receberam busca</li>"}</ul>
 Triagem por regra instruída com decisão auditável por ementa (a fábrica local usa script determinístico).</div>
-<footer>Gerado deterministicamente por gerar_relatorio_sessao_html.py — escada de cores e paleta com proveniência do motor supercordelia (consolidar.py / _estilos.py). Detalhes completos nos artefatos .md da sessão.</footer>
+<footer>Gerado deterministicamente por gerar_relatorio_sessao_html.py — escada de cores e paleta com proveniência do motor determinístico da fábrica local. Detalhes completos nos artefatos .md da sessão.</footer>
 </body>
 </html>'''
 

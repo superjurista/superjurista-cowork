@@ -7,8 +7,8 @@ Extrai cada trecho ENTRE ASPAS do documento e confere, por correspondencia
 normalizada (acentos/caixa/espacos), se e copia exata dos autos
 (processo.txt e/ou <numero>.txt no workspace).
 
-Motor identico ao gate da fabrica local (verificar_citacoes.py do repo
-superjurista), reduzido ao corpus dos autos e acrescido do VEREDITO em JSON
+Motor identico ao gate de citacoes da fabrica local, reduzido ao corpus dos
+autos e acrescido do VEREDITO em JSON
 com sha256 do corpus — so o veredito (nunca os autos) pode subir ao dossie.
 
 Trechos com corte interno ("(...)", "[...]", "...") sao divididos: cada
