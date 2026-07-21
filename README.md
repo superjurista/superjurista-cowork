@@ -12,7 +12,7 @@ citações e radar de precedentes ao vivo nos 6 TRFs.
 | Camada | Onde vive | O que contém |
 |--------|-----------|--------------|
 | **Corpo** (este repo, público) | Plugin instalado no Cowork | Skills orquestradoras finas, agentes de capacidade, scripts locais (OCR dos autos, gate de citações) |
-| **Cérebro** (gateway MCP, assinatura) | `superjurista.georgemarmelstein.workers.dev` | Prompts curados, missões de pipeline, manifestos, radar de jurisprudência dos 6 TRFs |
+| **Cérebro** (gateway MCP, assinatura) | `mcp.superjurista.com` | Prompts curados, missões de pipeline, manifestos, radar de jurisprudência dos 6 TRFs |
 
 Nenhum prompt de valor vive neste repositório — **por desenho**. O plugin é um
 *runtime*: cada etapa de pipeline pede sua missão ao gateway em tempo de

@@ -2,7 +2,10 @@
   "mcpServers": {
     "superjurista": {
       "type": "http",
-      "url": "https://superjurista.georgemarmelstein.workers.dev/mcp"
+      "url": "https://mcp.superjurista.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SUPERJURISTA_CONVITE}"
+      }
     }
   }
 }

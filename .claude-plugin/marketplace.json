@@ -12,7 +12,7 @@
       "name": "superjurista",
       "source": "./plugins/superjurista",
       "description": "Pipelines agênticos jurídicos no Claude Cowork: tribunal probatório adversarial, minuta de sentença com regime verbatim de citações e radar de precedentes nos 6 TRFs — executados por um runtime que busca cada missão no gateway SuperJurista em tempo real. Pipelines novos chegam pelo servidor, sem reinstalar nada.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "author": {
         "name": "George Marmelstein"
       },
