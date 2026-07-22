@@ -21,10 +21,11 @@ corpo é inerte. Com assinatura, **pipelines novos aparecem sem reinstalar
 nada** — eles são conteúdo do servidor, não código do plugin.
 
 **Instalar → Conectar → Escolher:** ao instalar o plugin, o Claude abre o
-login do SuperJurista com dois caminhos: **experimentar sem convite** (visitante
-com 1 resposta completa gratuita por dia) ou **tenho convite** (assinante com
-acesso ilimitado). Seu convite (`sj-...`) também pode ser digitado na conversa
-para elevar a conta sem reconectar. Para assinatura:
+login do SuperJurista com dois caminhos: o botão **Experimentar sem convite**
+(visitante com 1 resposta completa gratuita por dia) ou, para assinante, o
+campo de **convite** (`sj-...`) + e-mail seguido de **Autorizar acesso**. Seu
+convite também pode ser digitado na conversa para elevar a conta de visitante
+a assinante sem reconectar. Para assinatura:
 <https://mcp.superjurista.com/assinar>.
 
 ## Instalação
@@ -33,8 +34,9 @@ para elevar a conta sem reconectar. Para assinatura:
 1. Cowork → **Customize** → **Plugins** → adicionar marketplace a partir deste
    repositório (GitHub/Git URL).
 2. Instalar o plugin **superjurista**. O Claude abre automaticamente o login do
-   SuperJurista: escolha **experimentar sem convite** (visitante com 1 resposta/dia)
-   ou **tenho convite** (assinante com acesso ilimitado).
+   SuperJurista: clique em **Experimentar sem convite** (visitante com 1 resposta/dia)
+   ou preencha o **convite** (`sj-...`) + e-mail e clique em **Autorizar acesso**
+   (assinante com acesso ilimitado).
 3. Após login, o conector fica ativo: assinantes começam com `iniciar_superjurista`;
    visitantes usam `ativar_superjurista` e têm direito a uma tarefa completa gratuita
    por dia. Para elevar para assinante, digite seu convite (`sj-...`) na conversa.
